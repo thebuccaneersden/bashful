@@ -9,7 +9,7 @@
 
 
 # Add XAMPP bin to PATH
-PATH=/opt/xampp/bin:~/bin/:$PATH
+PATH=/opt/xampp/bin:~/bin:$PATH
 
 
 
@@ -33,7 +33,10 @@ alias tlj-todos='todo.sh ls +tlj'
 alias work-todos='todo.sh ls +playerize'
 # Path shortcuts
 alias projects='cd ~/Projects/'
-
+alias playground='cd ~/Projects/playground/'
+alias work='cd ~/Projects/work/'
+# Git shortcuts
+alias un-pushed='git log master ^origin/master'
 
 
 # ################ #
@@ -54,6 +57,21 @@ function serve() {
 		# Use the port passed an argument
 		php -S localhost:"$@" 
 	fi
+}
+
+
+
+# #####
+#
+# ####
+function git-unpushed() {
+        if [ -z "$@" ]; then
+                # Assuming master
+                git log master ^origin/master
+        else
+                # Otherwise, can specify a particular branch
+                git log "$@" ^origin/"$@"
+        fi
 }
 
 
