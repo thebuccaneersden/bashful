@@ -4,5 +4,7 @@
   rb = rebase
   st = status
 [user]
-	name = Hans-Christian Andersen
-	email = hans.andersen@phulse.com
+	name = thebuccaneersden
+	email = andersen.hc@gmail.com
+[color]
+	ui = true
