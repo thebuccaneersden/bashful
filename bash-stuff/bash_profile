@@ -39,10 +39,19 @@ alias work='cd ~/Projects/work/'
 alias un-pushed='git log master ^origin/master'
 
 
+
 # ################ #
 # GIT Autocomplete #
 # ################ #
 source ~/.bashful/git-stuff/git-completion.bash
+
+
+
+# ############### #
+# BASH GIT Prompt #
+# ############### #
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bashful/git-stuff/bash-git-prompt/gitprompt.sh
 
 
 
